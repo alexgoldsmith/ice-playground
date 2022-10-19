@@ -108,8 +108,5 @@ def parse_skills(resume_obj: dict) -> str:
             resume_str += f"""{keyword}
 """
         resume_str += f"""
-
 """
     return resume_str
-
-print(parse_resume())
