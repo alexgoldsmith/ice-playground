@@ -1,7 +1,5 @@
-from ice.recipe import recipe
-import json
-
-RESUME_JSON = {
+{
+  "selectedTemplate": 1,
   "headings": {
     "work": "Work Experience",
     "education": "Education",
@@ -186,73 +184,3 @@ RESUME_JSON = {
     "awards"
   ]
 }
-
-
-# parse json into a format easy for humans to read
-def parse_resume() -> str:
-    resume_str = ""
-    resume_obj = RESUME_JSON
-    resume_str += parse_profile(resume_obj)
-    # resume_str += parse_work(resume_obj)
-    # resume_str += parse_education(resume_obj)
-    # resume_str += parse_projects(resume_obj)
-    # resume_str += parse_skills(resume_obj)
-    return resume_str
-
-# parse profile
-def parse_profile(resume_obj: dict) -> str:
-    resume_str = ""
-    resume_str += f"""{resume_obj['basics']['name']}
-"""
-    resume_str += f"""{resume_obj['basics']['location']['address']}
-"""
-    resume_str += f"""{resume_obj['basics']['email']}
-"""
-    resume_str += f"""{resume_obj['basics']['phone']}
-"""
-    resume_str += f"""{resume_obj['basics']['website']}
-"""
-    return resume_str
-
-
-# parse work
-
-# parse education
-
-# parse projects
-
-# parse skills
-
-
-
-RESUME = parse_resume()
-COMPANY_DESC="""stuff"""
-ROLE_DESC="""stuff"""
-DESIRED_CANDIDATE_DESCRIPTION = """stuff"""
-
-QUESTION = """stuff"""
-
-
-def compose_prompt(question: str) -> str:
-    return f"""
-Resume: "{RESUME}"
-Company Description: "{COMPANY_DESC}"
-Role Description: "{ROLE_DESC}"
-Desired Candidate Description: "{DESIRED_CANDIDATE_DESCRIPTION}"
-
-Question: "{question}"
-
-Using the context provided above, we construct the best possible answer below:
-""".strip()
-
-
-async def answer(question: str = QUESTION
-) -> str:
-    prompt = compose_prompt(question)
-    answer = await recipe.agent().complete(prompt=prompt, stop='"')
-    return answer
-
-print(parse_resume())
-
-
-# recipe.main(answer)
