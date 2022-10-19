@@ -20,12 +20,13 @@
     {
       "institution": "University of Wisconsin - Madison",
       "location": "Madison, Wisconsin",
-      "endDate": "Present",
+      "studyType": "Professional Capstone Certificate (in progress)",
+      "area": "Computer Science",
       "startDate": "Dec 2020",
-      "studyType": "Professional Capstone Certificate in Computer Sciences (in progress)"
+      "endDate": "Present"
     },
     {
-      "institution": "Clemson",
+      "institution": "Clemson University",
       "location": "Clemson, South Carolina",
       "studyType": "MA",
       "area": "Economics",
@@ -45,18 +46,22 @@
   ],
   "work": [
     {
-      "location": "Madison, Wisconsin",
+      "company": "GreenShell, LLC",
       "position": "Full Stack Developer",
-      "website": "",
+      "location": "Madison, Wisconsin",
       "startDate": "Aug 2022",
+      "endDate": "Present",
       "highlights": [
         "Developed pages and UI components using Next.js, React, and Tailwind.",
         "Designed all digital graphics appearing on the website"
-      ],
-      "company": "GreenShell, LLC",
-      "endDate": "Present"
+      ]
     },
     {
+      "company": "Epic Systems Corporation",
+      "position": "Technical Solutions Engineer",
+      "location": "Madison, Wisconsin",
+      "startDate": "Dec 2019",
+      "endDate": "Jun 2021",
       "highlights": [
         "Ensured continued success of 6 hospital system organizations live on Epic’s registration and real-time eligibility applications through dozens of major software upgrades.",
         "Consistently maintained a success rate (greater than 90%) for First Response Time targets within the top half of the application support team.",
@@ -64,16 +69,6 @@
         "Owned high-impact customer issues from discovery to resolution, including issues within other Epic applications.",
         "Documented customer requirements, technical bugs and broken workflows, application functionality, and user feedback.",
         "Provided technical expertise to a customer implementation project, while mentoring the customer’s long-term support engineer."
-      ],
-      "company": "Epic Systems Corporation",
-      "position": "Technical Solutions Engineer",
-      "location": "Madison, Wisconsin",
-      "startDate": "Dec 2019",
-      "endDate": "Jun 2021"
-    },
-    {
-      "highlights": [
-        ""
       ]
     }
   ],
