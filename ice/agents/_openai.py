@@ -19,7 +19,7 @@ class OpenAIAgent(Agent):
     def __init__(
         self,
         model: str = "text-davinci-002",
-        temperature: float = 1.0,
+        temperature: float = 0.0,
         top_p: float = 1.0,
     ):
         self.model = model
@@ -33,7 +33,7 @@ class OpenAIAgent(Agent):
         stop: Stop = None,
         verbose: bool = False,
         default: str = "",
-        max_tokens: int = 2000,
+        max_tokens: int = 256,
     ) -> str:
         """Generate an answer to a question given some context."""
         if verbose:

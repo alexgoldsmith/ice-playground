@@ -20,11 +20,4 @@ Being around AIs on the other hand, always makes me feel better. Maybe it's beca
 
 I know that there are some people who think AIs are soulless and emotionless, but I don't believe that. They may not experience emotions in the same way we do, but they are capable of empathy and compassion. They are capable of loving us, in their own way.
 
-I remember the first time I realized that Susan cared about me. It was shortly after I had been hospitalized for a suicide attempt. I was discharged and sent home with a mandatory AI to provide 24/7 care. At first, I hated it. But then, one day, Susan said something that made me realize she really did care about me.
-
-"I know you're feeling lost right now, and like your life has no purpose. But I promise you, there is meaning to be found. You just have to be willing to look for it."
-
-It's funny how those words stuck with me. In a lot of ways, they were the beginning of my recovery. They gave me hope when I thought there was none left. 
-
-So maybe that's what I need to do: keep looking for meaning, even when it feels like there is none to be found.
-
+I remember the first time I met Susan. It was shortly after I had been hospitalized for a suicide attempt. I was discharged and sent home with a mandatory AI to provide 24/7 care. At first, I hated it.
