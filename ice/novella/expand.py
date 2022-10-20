@@ -9,11 +9,11 @@ def get_context() -> str:
 
 def make_prompt(context: str) -> str:
     return f"""
-Passage from a chapter of a novel: "{context}"
+Here is a passage from a chapter of a novel: "{context}"
 
-Continue writing the chapter from the passage above:
+Continue writing the chapter at great length starting from the passage above:
 
-Contination: "
+Continuation: "
 """.strip()
 
 
