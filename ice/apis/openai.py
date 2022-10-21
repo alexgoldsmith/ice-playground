@@ -84,10 +84,12 @@ async def openai_complete(
     stop: str | None = "\n",
     top_p: float = 1,
     temperature: float = 0,
+    frequency_penalty: float = 0,
     model: str = "text-davinci-002",
     max_tokens: int = 256,
     logprobs: int | None = None,
     n: int = 1,
+    best_of: int = 1,
     cache_id: int = 0,  # for repeated non-deterministic sampling using caching
 ) -> dict:
     """Send a completion request to the OpenAI API and return the JSON response."""
@@ -99,9 +101,11 @@ async def openai_complete(
             "stop": stop,
             "top_p": top_p,
             "temperature": temperature,
+            "frequency_penalty": frequency_penalty,
             "model": model,
             "max_tokens": max_tokens,
             "logprobs": logprobs,
             "n": n,
+            "best_of": best_of,
         },
     )

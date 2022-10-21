@@ -19,7 +19,7 @@ class OpenAIAgent(Agent):
     def __init__(
         self,
         model: str = "text-davinci-002",
-        temperature: float = 1.0,
+        temperature: float = 0.0,
         top_p: float = 1.0,
     ):
         self.model = model
@@ -33,12 +33,13 @@ class OpenAIAgent(Agent):
         stop: Stop = None,
         verbose: bool = False,
         default: str = "",
-        max_tokens: int = 2000,
+        n: int = 1,
+        max_tokens: int = 256,
     ) -> str:
         """Generate an answer to a question given some context."""
         if verbose:
             self._print_markdown(prompt)
-        response = await self._complete(prompt, stop=stop, max_tokens=max_tokens)
+        response = await self._complete(prompt, stop=stop)
         completion = self._extract_completion(response)
         if verbose:
             self._print_markdown(completion)
@@ -90,8 +91,11 @@ class OpenAIAgent(Agent):
         kwargs.update(
             {
                 "model": self.model,
-                "temperature": self.temperature,
+                "max_tokens": 3000,
+                "temperature": 1.0,
+                "frequency_penalty": 0.7,
                 "top_p": self.top_p,
+                "best_of": 2,
                 "n": 1,
             }
         )
