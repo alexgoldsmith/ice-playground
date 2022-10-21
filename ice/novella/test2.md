@@ -11,3 +11,5 @@ It's funny how clear the double-edged sword has become. Knowing that an AI can a
 "I noticed", Susan says. "Your sleep quality was only 70% of optimal conditions. I have some suggestions for improving your sleep quality if you would like to hear them, or I can listen if you have any stressors or anxieties you would like to discuss."
 
 "Thanks, Susan, but no thanks." I could recite her suggestions by heart at this point. All evidence-based, all presented in a confident, yet caring tone, perfectly optimized by trillions of simulations to maximize the likelihood of compliance. I fucking hate compliance. Guess that's another distinctive feature of being human. Knowing exactly how to make our lives better, and then not doing it.
+
+"Actually, maybe it's best if I just spend some time alone for a while. I'll call you if I need you." I'm in a bad mood, but the strange kind of bad mood where you don't want to feel better. The kind of bad mood that gives you that sick pleasure like when you keep rolling your tongue over a mouth sore or scratching at a painful mosquito bite.

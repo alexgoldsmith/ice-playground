@@ -2,15 +2,12 @@ import math
 
 from typing import Any
 
-from structlog.stdlib import get_logger
-
 from ice.agents.base import Agent
 from ice.agents.base import Stop
 from ice.apis.openai import openai_complete
 from ice.environment import env
 from ice.utils import longest_common_prefix
 
-log = get_logger()
 
 
 class OpenAIAgent(Agent):
@@ -39,7 +36,11 @@ class OpenAIAgent(Agent):
         """Generate an answer to a question given some context."""
         if verbose:
             self._print_markdown(prompt)
-        response = await self._complete(prompt, stop=stop)
+        try :
+            response = await self._complete(prompt, stop=stop)
+        except Exception as e: 
+            log.error("OpenAI API error", error=e)
+            return default
         completion = self._extract_completion(response)
         if verbose:
             self._print_markdown(completion)
@@ -91,17 +92,18 @@ class OpenAIAgent(Agent):
         kwargs.update(
             {
                 "model": self.model,
-                "max_tokens": 3000,
+                "max_tokens": 2000,
                 "temperature": 1.0,
                 "frequency_penalty": 0.7,
                 "top_p": self.top_p,
-                "best_of": 2,
+                "best_of": 1,
                 "n": 1,
             }
         )
-        response = await openai_complete(prompt, **kwargs)
-        if "choices" not in response:
-            raise ValueError(f"No choices in response: {response}")
+        try:
+            response = await openai_complete(prompt, **kwargs)
+        except Exception as e:
+            print(e)
         return response
 
     def _extract_completion(self, response: dict) -> str:

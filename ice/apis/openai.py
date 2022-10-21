@@ -94,7 +94,7 @@ async def openai_complete(
 ) -> dict:
     """Send a completion request to the OpenAI API and return the JSON response."""
     cache_id  # unused
-    return await _post(
+    response = await _post(
         "completions",
         json={
             "prompt": prompt,
@@ -109,3 +109,8 @@ async def openai_complete(
             "best_of": best_of,
         },
     )
+    if "choices" not in response:
+        raise ValueError(f"No choices in response: {response}")
+    if len(response["choices"]["text"]) == 0:
+        raise ValueError(f"No text in response: {response}")
+    return response
