@@ -22,6 +22,7 @@ Let's now continue writing the passage at length starting from the end of the pa
 async def expand(file: str = DEFAULT_CONTEXT) -> str:
     context = Path(file).read_text()
     prompt = make_prompt(context)
+    # set breakpoint
     response = await recipe.agent().complete(prompt=prompt, stop='"')
     suffix = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     with open(f"{file}_out_{suffix}.md", "w+") as f:
