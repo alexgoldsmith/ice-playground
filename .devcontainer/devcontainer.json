@@ -2,8 +2,7 @@
   "name": "ICE",
   "dockerComposeFile": "../docker-compose.yml",
   "service": "ice",
-  // see https://code.visualstudio.com/docs/editor/variables-reference 
-  "workspaceFolder": "${workspaceFolder}",
+  "workspaceFolder": "/code",
   "customizations": {
     "vscode": {
       "settings": {

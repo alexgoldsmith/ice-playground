@@ -1,10 +1,13 @@
 services:
   ice:
     image: docker.io/oughtinc/ice:0.2.0
-    environment:
-      OUGHT_INFERENCE_API_KEY: ${OUGHT_INFERENCE_API_KEY:-}
-      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
-      OPENAI_ORG_ID: ${OPENAI_ORG_ID:-}
+    # pass variables from file to service
+    # https://docs.docker.com/compose/environment-variables/#the-env_file-configuration-option
+    env_file: .env
+    # environment:
+    #   OUGHT_INFERENCE_API_KEY: ${OUGHT_INFERENCE_API_KEY:-}
+    #   OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    #   OPENAI_ORG_ID: ${OPENAI_ORG_ID:-}
     restart: on-failure
     volumes:
       # When mounting /code, don't clobber generated directories.

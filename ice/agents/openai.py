@@ -90,7 +90,7 @@ class OpenAIAgent(Agent):
         kwargs.update(
             {
                 "model": self.model,
-                "temperature": self.temperature,
+                "temperature": 1.0,
                 "top_p": self.top_p,
                 "n": 1,
             }

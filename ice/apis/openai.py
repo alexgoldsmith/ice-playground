@@ -83,7 +83,7 @@ async def openai_complete(
     prompt: str,
     stop: str | None = "\n",
     top_p: float = 1,
-    temperature: float = 0,
+    temperature: float = 1,
     model: str = "text-davinci-002",
     max_tokens: int = 256,
     logprobs: int | None = None,

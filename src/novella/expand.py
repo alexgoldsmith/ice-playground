@@ -18,13 +18,13 @@ Let's now continue writing the passage at length starting from the end of the pa
 """.strip()
 
 # example usage: python expand.py --file "chapter_1.md"
-async def expand(file: str = "default.md") -> str:
+async def expand(file: str = "/code/src/novella/test2.md") -> str:
     context = Path(file).read_text()
     prompt = make_prompt(context)
     # set breakpoint
-    response = await recipe.agent().complete(prompt=prompt, max_tokens=2000, stop='"')
+    response = await recipe.agent().complete(prompt=prompt, max_tokens=2000)
     suffix = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    with open(f"{file}_out_{suffix}.md", "w+") as f:
+    with open(f"{file}_{suffix}.md", "w+") as f:
         f.write(response)
     return response 
 
