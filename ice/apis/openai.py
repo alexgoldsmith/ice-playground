@@ -84,33 +84,24 @@ async def openai_complete(
     stop: str | None = "\n",
     top_p: float = 1,
     temperature: float = 0,
-    frequency_penalty: float = 0,
     model: str = "text-davinci-002",
     max_tokens: int = 256,
     logprobs: int | None = None,
     n: int = 1,
-    best_of: int = 1,
     cache_id: int = 0,  # for repeated non-deterministic sampling using caching
 ) -> dict:
     """Send a completion request to the OpenAI API and return the JSON response."""
     cache_id  # unused
-    response = await _post(
+    return await _post(
         "completions",
         json={
             "prompt": prompt,
             "stop": stop,
             "top_p": top_p,
             "temperature": temperature,
-            "frequency_penalty": frequency_penalty,
             "model": model,
             "max_tokens": max_tokens,
             "logprobs": logprobs,
             "n": n,
-            "best_of": best_of,
         },
     )
-    if "choices" not in response:
-        raise ValueError(f"No choices in response: {response}")
-    if len(response["choices"]["text"]) == 0:
-        raise ValueError(f"No text in response: {response}")
-    return response

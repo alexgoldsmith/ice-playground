@@ -28,26 +28,17 @@ if [ -n "${TORCH:-}" ]; then
   variant="torch"
 fi
 
-# If the user has specified a variant, we add the corresponding compose file to
-# the list of compose files to use.
 if [ -n "${variant}" ]; then
   files="${files} -f docker-compose.${variant}.yml"
   if [ -n "${BUILD:-}" ]; then
     files="${files} -f docker-compose.build-${variant}.yml"
   fi
-
-# If the user has specified a build, we add the corresponding compose file to
-# the list of compose files to use.
 elif [ -n "${BUILD:-}" ]; then
   files="${files} -f docker-compose.build.yml"
 fi
 
-# If the user has specified a build, we add the --build flag to the docker
-# compose command.
 if [ -n "${BUILD:-}" ]; then
   args="${args} --build"
 fi
 
-# Finally, we run the docker compose command with the list of compose files and
-# the list of arguments.``
 $docker -f docker-compose.yml $files up $args "$@"
