@@ -1,0 +1,1 @@
+I stare out the window. My building is on the edge of the city and beyond it is only wilderness. I can't see any other buildings from my window, which is probably why I chose this apartment. I like feeling like I'm the only person for miles, even though I know I'm not.
