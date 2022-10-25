@@ -1,5 +1,9 @@
 {
   "name": "ICE",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "ice",
+  // see https://code.visualstudio.com/docs/editor/variables-reference 
+  "workspaceFolder": "${workspaceFolder}",
   "customizations": {
     "vscode": {
       "settings": {
@@ -14,10 +18,5 @@
         "redhat.vscode-yaml"
       ]
     }
-  },
-  // "hostRequirements": {
-  //   "cpus": 4,
-  //   "memory": "16gb",
-  //   "storage": "64gb"
-  // }
+  }
 }
