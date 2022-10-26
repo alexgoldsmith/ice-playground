@@ -1,9 +1,6 @@
 services:
   ice:
     image: docker.io/oughtinc/ice:0.2.0
-    container_name: iceapp-dev
-    build:
-      context: ..
     # pass variables from file to service
     # https://docs.docker.com/compose/environment-variables/#the-env_file-configuration-option
     env_file: .env.example # user should replace this with their own .env file
