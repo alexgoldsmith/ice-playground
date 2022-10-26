@@ -2,7 +2,7 @@
   "name": "ICE",
   "dockerComposeFile": "docker-compose.yml",
   "service": "ice",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "workspaceFolder": "/workspaces/code",
   "customizations": {
     "vscode": {
       "settings": {
@@ -10,12 +10,13 @@
         "files.autoSaveDelay": 1000
       },
       "extensions": [
-        "ms-python.python",
-        "ms-python.vscode-pylance",
-        "esbenp.prettier-vscode",
-        "github.copilot",
-        "redhat.vscode-yaml"
-      ]
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"esbenp.prettier-vscode",
+		"github.copilot",
+		"redhat.vscode-yaml",
+		"ms-azuretools.vscode-docker"
+	]
     }
   }
 }
