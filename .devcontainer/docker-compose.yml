@@ -6,11 +6,11 @@ services:
     env_file: .env.example # user should replace this with their own .env file
     restart: on-failure
     volumes:
-      - ../.:/workspaces/code
-      - /workspaces/code/.venv/
-      - /workspaces/code/ui/node_modules/
       # When mounting source code, don't clobber generated directories.
       # https://stackoverflow.com/a/37898591
+      - /workspaces/code/.venv/
+      - /workspaces/code/ui/node_modules/
+      - ../.:/workspaces/code
     ports:
       - "3000:3000"
       - "8935:8935"

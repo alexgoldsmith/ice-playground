@@ -14,13 +14,13 @@
 /.git
 /.mypy_cache
 /.pre-commit-home
-/data
+**/data
 /ice/contrib/*/
 /papers/*.pdf
 /papers/*.txt
 !/papers/keenan-2018-tiny.txt
 !/papers/keenan-2018.pdf
 /store
-/ui/.next/
-/ui/node_modules
-/ui/public/traces/*.jsonl
+**/ui/.next/
+**/ui/node_modules
+**/ui/public/traces/*.jsonl
