@@ -6,14 +6,14 @@ services:
       context: ..
     # pass variables from file to service
     # https://docs.docker.com/compose/environment-variables/#the-env_file-configuration-option
-    env_file: .env
+    env_file: .env.example # user should replace this with their own .env file
     restart: on-failure
     volumes:
       - ../.:/workspaces/code
+      - /workspaces/code/.venv/
+      - /workspaces/code/ui/node_modules/
       # When mounting source code, don't clobber generated directories.
       # https://stackoverflow.com/a/37898591
-      # - /workspaces/${localWorkspaceFolderBasename}/.venv/
-      # - /workspaces/${localWorkspaceFolderBasename}/ui/node_modules/
     ports:
       - "3000:3000"
       - "8935:8935"
