@@ -2,7 +2,7 @@ import json
 
 # load json from file src/job_qa/resume.json
 def load_resume() -> dict:
-    with open('src/job_qa/resume.json') as f:
+    with open('/workspaces/code/src/career/resume.json') as f:
         resume_json = json.load(f)
     return resume_json
 
