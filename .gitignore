@@ -11,6 +11,8 @@
 **/*.sqlite
 /.coverage
 **/.env
+/.poetry/artifacts
+/.poetry/cache
 /.git
 /.mypy_cache
 /.pre-commit-home

@@ -15,3 +15,5 @@ It's funny how clear the double-edged sword has become. Knowing that an AI can a
 "Actually, maybe it's best if I just spend some time alone for a while. I'll call you if I need you." I'm in a bad mood, but the strange kind of bad mood where you don't want to feel better. The kind of bad mood that gives you that sick pleasure like when you keep rolling your tongue over a mouth sore or scratching at a painful mosquito bite.
 
 I grab my coat. I'm hoping it is cold outside. It's early october, but the air has carried an early chill the last few days. I don't know where I am going but I suddenly feel as if I can't stand a moment longer in my apartment.
+
+Outside, the air is bitter cold. Exactly what I was hoping for. My brief moment of reverie is interrupted by the growing whine of a delivery drone speeding overhead. The pitch of the whine grows higher until my ears are ringing and I feel a pain in my skull.
