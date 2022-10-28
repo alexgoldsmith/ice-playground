@@ -1,0 +1,3 @@
+"I can't tell the difference between an AI and a human, unless the person is incompetent, rude, or otherwise flawed, in which case the distinction is obvious.
+
+It's funny how clear the double-edged sword has become. Knowing that an AI can accomplish a profession better than any human is so often unnerving and frightening, until you really, really need someone to be good at their job. That's when you're glad they're perfect."

@@ -16,4 +16,4 @@ It's funny how clear the double-edged sword has become. Knowing that an AI can a
 
 I grab my coat. I'm hoping it is cold outside. It's early october, but the air has carried an early chill the last few days. I don't know where I am going but I suddenly feel as if I can't stand a moment longer in my apartment.
 
-Outside, the air is bitter cold. Exactly what I was hoping for. My brief moment of reverie is interrupted by the growing whine of a delivery drone speeding overhead. The pitch of the whine grows higher until my ears are ringing and I feel a pain in my skull.
+Outside, the air is bitter cold. Exactly what I was hoping for. My brief moment of reverie is interrupted by the growing whine of a delivery drone speeding overhead. The pitch of the whine grows higher until my ears are ringing and I feel a pain in my skull. As quickly as it came, the drone is gone.

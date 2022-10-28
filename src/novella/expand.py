@@ -2,7 +2,6 @@ from pathlib import Path
 from datetime import datetime
 from ice.recipe import recipe
 
-
 TIPS = """Here are some writing tips:
 - Focus on the interactions of characters.
 - Show, don't tell.
@@ -25,23 +24,23 @@ STYLE = """Since we are writing a science fiction novel, let's draw inspiration 
 DIR = Path(__file__).parent.resolve()
 
 def make_prompt(context: str) -> str:
-    return f"""
-Here is a passage from a chapter of a novel: "{context}"
+    return f"""We are writing a science fiction novel.
 
-{TIPS}
 {STYLE}
+{TIPS}
 
-Let's continue writing, starting by repeating the last sentence of the passage above.
+Here the passage so far: "{context}"
+
+Let's continue writing the passage below, starting by repeating the last paragraph of the passage above:
 """.strip()
 
 # example usage: python expand.py --file "chapter_1.md"
-async def expand(file: str = "default.md") -> str:
+async def expand(file: str = "ch_1.md") -> str:
     context = (DIR / file).read_text()
     prompt = make_prompt(context)
     response = await recipe.agent().complete(prompt=prompt, max_tokens=3000)
 
     suffix = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-
     new_file = DIR / "outputs" / f"{file}_{suffix}.md"
 
     with new_file.open("w+") as f:
