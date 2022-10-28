@@ -1,1 +1,0 @@
-"Outside, the air is bitter cold. Exactly what I was hoping for. My brief moment of reverie is interrupted by the growing whine of a delivery drone speeding overhead. The pitch of the whine grows higher until my ears are ringing and I feel a pain in my skull."
