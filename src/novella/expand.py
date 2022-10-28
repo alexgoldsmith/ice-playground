@@ -38,7 +38,7 @@ Let's continue writing the passage below, starting by repeating the last paragra
 async def expand(file: str = "ch_1.md") -> str:
     context = (DIR / file).read_text()
     prompt = make_prompt(context)
-    response = await recipe.agent().complete(prompt=prompt, max_tokens=3000)
+    response = await recipe.agent().complete(prompt=prompt, max_tokens=2000)
 
     suffix = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     new_file = DIR / "outputs" / f"{file}_{suffix}.md"
