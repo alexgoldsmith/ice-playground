@@ -1,8 +1,11 @@
 import json
+from pathlib import Path
+
+DIR = Path(__file__).parent.resolve()
 
 # load json from file src/job_qa/resume.json
 def load_resume() -> dict:
-    with open('/workspaces/code/src/career/resume.json') as f:
+    with (DIR / "resume.json").open() as f:
         resume_json = json.load(f)
     return resume_json
 

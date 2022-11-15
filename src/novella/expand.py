@@ -1,6 +1,8 @@
 from pathlib import Path
 from datetime import datetime
 from ice.recipe import recipe
+from ice.utils import map_async
+from random import randint
 
 TIPS = """Here are some writing tips:
 - Focus on the interactions of characters.
@@ -41,11 +43,17 @@ async def expand(file: str = "ch_1.md") -> str:
     response = await recipe.agent().complete(prompt=prompt, max_tokens=2000)
 
     suffix = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    new_file = DIR / "outputs" / f"{file}_{suffix}.md"
+    i = randint(0, 1000)
+    new_file = DIR / "outputs" / f"{file}_{suffix}_{i}.md"
 
     with new_file.open("w+") as f:
         f.write(response)
     return response 
 
+# TODO: disable caching
+async def branch(file: str = "default.md") -> list[str]:
+    chlist = [file for i in range(0, 5)] 
+    branches = await map_async(chlist, expand)
+    return branches
 
-recipe.main(expand)
+recipe.main(branch)

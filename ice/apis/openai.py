@@ -78,7 +78,7 @@ async def _post(endpoint: str, json: dict, timeout: float | None = None) -> dict
         return response.json()
 
 
-@diskcache()
+# @diskcache()
 async def openai_complete(
     prompt: str,
     stop: str | None = "\n",
@@ -90,7 +90,7 @@ async def openai_complete(
     n: int = 1,
     cache_id: int = 0,  # for repeated non-deterministic sampling using caching
     frequency_penalty: float = 1.4,
-    presence_penalty: float = 0.6,
+    presence_penalty: float = 1.0,
 ) -> dict:
     """Send a completion request to the OpenAI API and return the JSON response."""
     cache_id  # unused

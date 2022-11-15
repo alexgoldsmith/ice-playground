@@ -1,5 +1,5 @@
 {
-  "name": "ICE",
+  "name": "Ice-Dev",
   "dockerComposeFile": "docker-compose.yml",
   "service": "ice",
   "workspaceFolder": "/workspaces/code",

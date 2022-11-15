@@ -1,7 +1,7 @@
 import json
 
 from ice.recipe import recipe
-from src.career.parse_resume import parse_resume
+from parse_resume import parse_resume
 
 RESUME = parse_resume()
 COMPANY_DESC="""Ought is a product-driven machine learning lab building Elicit, an AI research assistant. Elicit uses language models to automate and support research processes like literature and evidence review. Elicit applies frontier technology to serious use cases, enabling our research team to understand in great detail where language models fail and how to mitigate such failures."""
