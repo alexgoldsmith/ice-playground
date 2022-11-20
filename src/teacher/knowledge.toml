@@ -1,3 +1,20 @@
-[knowledge]
-problem = "I need to build a form using Next.js and React
-solution = "I should use the Formik libarary"
+[[knowledge]]
+problem = "I need to build a form using Next.js and React"
+solutions = [
+    "I should use the Formik libarary"
+]
+
+[[knowledge]]
+problem = "I need to build a registration form for a Wordpress site"
+solutions = [
+    "I should use the WPForms plugin",
+    "I should use the Ninja Forms plugin",
+    "I should use the Contact Form 7 plugin",
+    "I should use the Gravity Forms plugin",
+    "I should use the Caldera Forms plugin",
+    "I should use the Formidable Forms plugin",
+    "I should use Jetpack Contact Form",
+]
+[[knowledge]]
+question = "Where are pages stored in Wordpress"
+answer = "Pages are stored in the wp_posts table of the Wordpress database"

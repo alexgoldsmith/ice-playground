@@ -46,7 +46,7 @@ async def generate_post(topic: str = TOPIC) -> str:
     outline = await recipe.agent().complete(prompt=outline_prompt, max_tokens=800, stop='"')
 
     blog_prompt = get_blog_post_prompt(topic, outline)
-    blog_post = await recipe.agent().complete(prompt=blog_prompt, max_tokens=2400)
+    blog_post = await recipe.agent().complete(prompt=blog_prompt, max_tokens=3400)
 
     suffix = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     with open(f"./outputs/{suffix}.md", "w+") as f:
