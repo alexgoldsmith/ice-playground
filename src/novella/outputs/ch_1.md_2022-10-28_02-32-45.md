@@ -1,7 +1,0 @@
-I look up at the sky and see the blinking red light of the drone as it disappears into the distance. I can't help but feel a little bit jealous of the drone. It knows exactly where it is going and what it is supposed to do. It doesn't have to worry about making the wrong decision or screwing up. It is the perfect example of a machine that is doing its job perfectly.
-
-I, on the other hand, feel like I am constantly screwing up. I make the wrong decisions, I say the wrong things, I do the wrong things. It seems like everything I do is wrong. Even when I try to do something right, it somehow ends up being wrong. I feel like a complete failure.
-
-I realize that I am standing in the middle of the street, and I quickly move to the sidewalk. I don't want to get hit by a car. That would really be the icing on the cake. As I walk, I try to calm myself down. I tell myself that I am not a failure, that I am just a human being and that it is normal to make mistakes.
-
-I am not sure if it is the cold air or my pep talk to myself, but I start to feel better. I begin to walk with a little bit more purpose and I even start to whistling a tune. Maybe things are not so bad after all. Maybe I can get through this day after all.

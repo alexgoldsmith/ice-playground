@@ -22,8 +22,14 @@ I speak to the air. "Zee, this is Jay. Pickup if you can." A heartbeat passes an
 
 "Yo, Jay, what's up brother?"
 
-"I just got buzzed by a flier. Right overhead. Heading north on Roman Avenue. Think I could borrow a netter?"
+"I just got buzzed by a flier. Flew right overhead in a restricted zone in broad daylight. Heading north on Roman Avenue. Think I could borrow a netter?"
 
-"Yeah, I can send one your way. ETA about five minutes."
+"Yeah, I can send one your way. Did you catch the manufacturer?."
+
+"Autonomous Delivery Drones."
+
+"Those assholes. You are in luck though, their security department is in shambles. They've been hit by four zero-day exploits already this month. I guess it is about to be five." I can see Zee's trademark self-satisfied smirk through the phone.
+
+"The Netter will be there in five", Zee tells me. "Try not to break it."
 
 I thank him and disconnect the call. I pull my coat tight around me and keep walking.
