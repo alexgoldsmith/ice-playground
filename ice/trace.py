@@ -61,12 +61,22 @@ def emit(value):
         print(file=trace_file, flush=True)
 
 
+def compress(o: object):
+    if isinstance(o, dict):
+        if {"paragraphs", "document_id"} <= set(o):
+            return {"document_id": o["document_id"]}
+        return {k: compress(v) for k, v in o.items()}
+    if isinstance(o, list):
+        return [compress(v) for v in o]
+    return o
+
+
 class JSONEncoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, dict):
             return {repr(k): v for k, v in o.items()}
         if hasattr(o, "dict") and callable(o.dict):
-            return o.dict()
+            return compress(o.dict())
         if isfunction(o):
             return dict(class_name=o.__class__.__name__, name=o.__name__)
         try:
@@ -79,16 +89,6 @@ class JSONEncoder(json.JSONEncoder):
             return super().iterencode(o)
         except TypeError:
             return self.default(o)
-
-
-def compress_arg(k: str, v):
-    if k == "paper":
-        return {"document_id": v.document_id}
-    return v
-
-
-def compress_args(arg_dict):
-    return {k: compress_arg(k, v) for k, v in arg_dict.items()}
 
 
 # To add records to the trace, use the following code:
@@ -142,7 +142,6 @@ def trace(fn):
                     arg_dict.update(v)
                 else:
                     arg_dict[k] = v
-            compressed_args = compress_args(arg_dict)
 
             emit(
                 {
@@ -151,7 +150,7 @@ def trace(fn):
                         start=monotonic_ns(),
                         name=fn.__name__,
                         doc=getdoc(fn),
-                        args=compressed_args,
+                        args=arg_dict,
                         source=getsource(fn),
                     ),
                     f"{parent_id}.children.{id}": True,

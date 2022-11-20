@@ -88,6 +88,7 @@ async def openai_complete(
     max_tokens: int = 256,
     logprobs: int | None = None,
     n: int = 1,
+    echo: bool = False,
     cache_id: int = 0,  # for repeated non-deterministic sampling using caching
     frequency_penalty: float = 1.4,
     presence_penalty: float = 1.0,
