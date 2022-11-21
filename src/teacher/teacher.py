@@ -1,15 +1,15 @@
 from pathlib import Path
 from datetime import datetime
 from ice.recipe import recipe
-from examples.howto_html_form import OUTLINE
+from examples.formik_react_next_form import OUTLINE
 
 TOPIC = """How do I make a write an Node.js api call to send an email?"""
 
 def get_outline_prompt(topic: str) -> str:
     return f"""
-Let's take a question and write an outline for a blog post explaining the solution.
+Let's take a question and write a detailed outline for an extensive technical blog post explaining the solution step-by-step.
 
-Here is an example of an outline format:
+Here is an example of a question and corresponding outline:
 
 {OUTLINE}
 
